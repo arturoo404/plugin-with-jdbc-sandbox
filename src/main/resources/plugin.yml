@@ -1,0 +1,10 @@
+name: MinecraftPlugin
+version: '${project.version}'
+main: com.arturoo404.minecraftplugin.MinecraftPlugin
+api-version: 1.16
+authors: [ Arturoo ]
+description: Plugin
+
+commands:
+  connect_web_account:
+    description: "Connect your game account with web account"
