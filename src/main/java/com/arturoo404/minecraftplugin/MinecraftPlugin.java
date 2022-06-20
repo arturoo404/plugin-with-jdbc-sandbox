@@ -1,8 +1,9 @@
 package com.arturoo404.minecraftplugin;
 
 import com.arturoo404.minecraftplugin.commands.ConnectWebAccount;
-import com.arturoo404.minecraftplugin.database.DataBase;
-import com.arturoo404.minecraftplugin.player.PlayerServerEvent;
+import com.arturoo404.minecraftplugin.commands.SellGold;
+import com.arturoo404.minecraftplugin.listener.BlockEvent;
+import com.arturoo404.minecraftplugin.listener.PlayerServerEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -14,13 +15,13 @@ import org.bukkit.scoreboard.*;
 
 public final class MinecraftPlugin extends JavaPlugin implements Listener{
 
-    DataBase dataBase;
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new DropItemTeleport(), this);
+        getServer().getPluginManager().registerEvents(new BlockEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerServerEvent(), this);
         getServer().getPluginManager().registerEvents(this, this);
         getCommand("connect_web_account").setExecutor(new ConnectWebAccount());
+        getCommand("sell_gold").setExecutor(new SellGold());
     }
 
 

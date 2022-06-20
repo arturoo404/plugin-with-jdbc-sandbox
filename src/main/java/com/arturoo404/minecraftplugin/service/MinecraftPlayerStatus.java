@@ -1,13 +1,13 @@
-package com.arturoo404.minecraftplugin.service.impl;
+package com.arturoo404.minecraftplugin.service;
 
-import com.arturoo404.minecraftplugin.database.DataBase;
+import com.arturoo404.minecraftplugin.service.database.DataBase;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class MinecraftPlayerService {
+public class MinecraftPlayerStatus {
     private final DataBase dataBase = new DataBase();
 
     //TODO Update player name in database after change his name on mojang page

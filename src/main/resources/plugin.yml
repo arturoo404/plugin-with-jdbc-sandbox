@@ -8,3 +8,5 @@ description: Plugin
 commands:
   connect_web_account:
     description: "Connect your game account with web account"
+  sell_gold:
+    description: "Sell gold for exchange for money"

@@ -1,6 +1,6 @@
 package com.arturoo404.minecraftplugin.commands;
 
-import com.arturoo404.minecraftplugin.database.DataBase;
+import com.arturoo404.minecraftplugin.service.database.DataBase;
 import com.arturoo404.minecraftplugin.exception.EmailException;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -40,7 +40,7 @@ public class ConnectWebAccount implements CommandExecutor {
         boolean emailDb = emailInDb(email);
 
         if (webConnect){
-            throw new EmailException("This account is already connected.");
+            throw new EmailException("This account have already connected.");
         }
         if (!emailDb){
             throw new EmailException("We don't found your email in database.");

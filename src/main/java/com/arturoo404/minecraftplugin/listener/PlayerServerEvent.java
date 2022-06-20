@@ -1,6 +1,6 @@
-package com.arturoo404.minecraftplugin.player;
+package com.arturoo404.minecraftplugin.listener;
 
-import com.arturoo404.minecraftplugin.service.impl.MinecraftPlayerService;
+import com.arturoo404.minecraftplugin.service.MinecraftPlayerStatus;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,18 +12,18 @@ import java.sql.SQLException;
 
 public class PlayerServerEvent implements Listener {
 
-    private final MinecraftPlayerService minecraftPlayerService = new MinecraftPlayerService();
+    private final MinecraftPlayerStatus minecraftPlayerStatus = new MinecraftPlayerStatus();
 
     @EventHandler
     public void joinServer(PlayerJoinEvent event) throws SQLException {
         Player player = event.getPlayer();
         player.sendMessage(ChatColor.AQUA + "Welcome!");
-        minecraftPlayerService.playerOnline(true, player.getDisplayName(), player.getUniqueId().toString());
+        minecraftPlayerStatus.playerOnline(true, player.getDisplayName(), player.getUniqueId().toString());
     }
 
     @EventHandler
     public void quitServer(PlayerQuitEvent event) throws SQLException {
         Player player = event.getPlayer();
-        minecraftPlayerService.playerOnline(false, player.getDisplayName(), player.getUniqueId().toString());
+        minecraftPlayerStatus.playerOnline(false, player.getDisplayName(), player.getUniqueId().toString());
     }
 }

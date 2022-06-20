@@ -1,4 +1,4 @@
-package com.arturoo404.minecraftplugin.database;
+package com.arturoo404.minecraftplugin.service.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
