@@ -25,6 +25,8 @@ public class SellGold implements CommandExecutor {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+                p.getInventory().getItemInMainHand().setAmount(0);
+                return false;
             }
             if (p.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("§eHeavy Ingot")){
                 try {
@@ -33,8 +35,9 @@ public class SellGold implements CommandExecutor {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+                p.getInventory().getItemInMainHand().setAmount(0);
+                return false;
             }
-            p.getInventory().getItemInMainHand().setAmount(0);
         }
         return false;
     }
