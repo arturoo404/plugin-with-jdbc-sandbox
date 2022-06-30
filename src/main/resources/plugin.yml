@@ -10,3 +10,5 @@ commands:
     description: "Connect your game account with web account"
   sell_gold:
     description: "Sell gold for exchange for money"
+  get_item:
+    description: "Get item"

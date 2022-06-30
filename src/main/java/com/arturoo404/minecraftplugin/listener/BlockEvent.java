@@ -1,11 +1,16 @@
 package com.arturoo404.minecraftplugin.listener;
 
 import com.arturoo404.minecraftplugin.items.Money;
+import org.bukkit.Bukkit;
+import org.bukkit.Chunk;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.world.ChunkLoadEvent;
 
 import java.util.Random;
 
@@ -25,4 +30,5 @@ public class BlockEvent implements Listener {
             block.getWorld().dropItem(block.getLocation(), new Money().createCoin());
         }
     }
+
 }
