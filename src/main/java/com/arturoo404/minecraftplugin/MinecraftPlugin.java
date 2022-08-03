@@ -17,7 +17,7 @@ public final class MinecraftPlugin extends JavaPlugin implements Listener{
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new BlockEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerServerEvent(this), this);
-        getServer().getPluginManager().registerEvents(new ChunkLoad(), this);
+        getServer().getPluginManager().registerEvents(new ChunkLoad(this), this);
         getCommand("connect_web_account").setExecutor(new ConnectWebAccount());
         getCommand("sell_gold").setExecutor(new SellGold());
         getCommand("get_item").setExecutor(new ItemGetCommends());

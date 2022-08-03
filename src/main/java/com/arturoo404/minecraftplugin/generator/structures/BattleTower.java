@@ -1,4 +1,4 @@
-package com.arturoo404.minecraftplugin.structures;
+package com.arturoo404.minecraftplugin.generator.structures;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
